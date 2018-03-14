@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+     <link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name=”description” content="Musthu's Portfolio. Freelance Graphic Designer and Programmer." />
+    <title>Musthu's Portfolio</title>
+    <meta property="og:site_name" content="haxzie.me">
+     <meta property="og:title" content="Musthu's Portfolio" />
+     <meta property="og:description" content="Hi, I am Musthaq Ahamad, Frelance graphic designer and Programmer." />
+     <meta property="og:image" itemprop="image" content="http://haxzie.me/images/musthu.png">
+     <meta property="og:type" content="website" />
+
+    <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-101997744-1', 'auto');
+       ga('send', 'pageview');
+
+       </script>
+  </head>
+
+  <body>
+ <!--Import jQuery before materialize.js-->
+ <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+ <script type="text/javascript" src="js/materialize.min.js"></script>
+ <script src="js/jquery.unveil.js"></script>    
+ <script>
+ $(document).ready(function(){
+     $('.materialboxed').materialbox();
+     $(".button-collapse").sideNav();
+     $(".unveil").unveil(300);
+     $(".button-collapse").sideNav();
+     setTimeout( function(){
+       //Opening Tap tagrget
+      $('.tap-target').tapTarget('open');
+      //closing tap target after 5 seconds
+      setTimeout( function(){
+        $('.tap-target').tapTarget('close');
+      }, 5000);
+     }, 2000);
+     
+     $('#main_tabs').tabs({
+       onShow: function(tab){
+         console.log(tab[0].id);
+         switch(tab[0].id){
+           case 'portfolio':
+                $('.early_load_portfolio').trigger('unveil');
+                break;
+            case 'projects':
+                $('.early_load_projects').trigger('unveil');
+                break;
+            case 'about':
+                $('.early_load_profile').trigger('unveil');
+                break;
+         }
+       }
+     });
+    jQuery('.skillbar').each(function(){
+        jQuery(this).find('.skillbar-bar').animate({
+            width:jQuery(this).attr('data-percent')
+        },2000);
+    });
+
+});
+ </script>
+
+
+    <!-- navigation bar -->
+    <nav class="nav-extended">
+  <div class="nav-wrapper  #212121 grey darken-4">
+    <a href="#" class="brand-logo"><img src="images/main_logo.png" class="responsive-img logo"/></a>
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul id="slide-out" class="side-nav teal center">
+            <li><a href="mailto:musthu.gm@gmail.com?Subject=Hai%20Musthu" class="white-text">Contact</a></li>
+            <li><a href="https://github.com/haxzie" class="white-text">Github</a></li>
+            <li><a href="https://facebook.com/musthu.pvr" class="white-text">Facebook</a></li>
+            <li><a href="https://dribbble.com/haxzie" class="white-text">Dribbble</a></li>
+            <li><a href="https://instagram.com/haxzie" class="white-text">Instagram</a></li>
+       </ul>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="https://instagram.com/haxzie" target="_blank">Instagram</a></li>
+      <li><a href="mailto:musthu.gm@gmail.com?Subject=Hai%20Musthu">Contact</a></li>
+      <li><a href="https://github.com/haxzie">Github</a></li>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+      <li><a href="https://instagram.com/haxzie" target="_blank">Instagram</a></li>
+      <li><a href="mailto:musthu.gm@gmail.com?Subject=Hai%20Musthu">Contact</a></li>
+      <li><a href="https://github.com/haxzie">Github</a></li>
+    </ul>
+  </div>
+  <div class="nav-content #212121 grey darken-4">
+    <ul id="main_tabs" class="tabs tabs-transparent">
+      <li class="tab"><a class="active" href="#home">Home</a></li>
+      <li class="tab"><a href="#portfolio">Portfolio</a></li>
+      <li class="tab"><a href="#projects">Projects</a></li>
+      <li class="tab"><a href="#about">about</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div id="home" class="col s12">
+    <!-- Page Layout here -->
+ 
+    <div class="row pad20top #333333">
+ 
+      <div class="col s12 m4 l3 ">
+ 
+        <div class="row">
+          <div class="card grey darken-4 z-index-4 pad20top">
+            <div class="container center-align">
+              <img src="images/musthu.png" alt="" class="circle responsive-img center-align">
+             </div>
+            <div class="card-content">
+              <p class="card-title white-text center-align">Musthaq Ahamad</p>
+              <p class="white-text center-align">Hi there, I am a freelance graphic designer and Android developer. Take a closer look at my porfolio, you'll like it. Feel free to contact and connect with me.</p>
+            </div>
+              <div class="card-action center-align">
+                <div class="row center">
+                  <ul class="icons">
+                     <li class="icon"><a href="http://facebook.com/musthu.pvr"><img src="images/facebook-logo.svg" class="responsive-img"/></a></li>
+                     <li class="icon"><a href="http://dribbble.com/haxzie"><img src="images/dribbble-logo.svg" class="responsive-img"/></a></li>
+                     <li class="icon"><a href="http://haxzie.wordpress.com"><img src="images/wordpress-logo.svg" class="responsive-img"/></a></li>
+                     <li class="icon"><a href="http://instagram.com/haxzie"><img src="images/insta-logo.svg" class="responsive-img"/></a></li>
+                 </ul>
+               </div>
+              </div>
+          </div>
+        </div>
+ 
+        <!-- skill set -->
+        <div class="row">
+          <div class="card grey darken-4 z-index-4">
+            <div class="card-content">
+              <p class="card-title white-text center-align">Skills</p>
+              <div class="skillbar clearfix " data-percent="85%">
+                   <div class="skillbar-title" style="background: #88cd2a;"><span>Android</span></div>
+                   <div class="skillbar-bar" style="background: #88cd2a;"></div>
+                   <div class="skill-bar-percent">85%</div>
+                   </div>
+                   <!---  CSS -->
+                   <div class="skillbar clearfix " data-percent="75%">
+                   <div class="skillbar-title" style="background: #00a8ff;"><span>Java</span></div>
+                   <div class="skillbar-bar" style="background: #00a8ff;"></div>
+                   <div class="skill-bar-percent">75%</div>
+                   </div>
+ 
+                   <div class="skillbar clearfix " data-percent="50%">
+                   <div class="skillbar-title" style="background: #43a047;"><span>Python</span></div>
+                   <div class="skillbar-bar" style="background: #43a047;"></div>
+                   <div class="skill-bar-percent">50%</div>
+                   </div>
+                   <!-- /CSS -->
+                   <!-- jQuery  -->
+                   <div class="skillbar clearfix " data-percent="65%">
+                   <div class="skillbar-title" style="background: #00695c;"><span>Node.js</span></div>
+                   <div class="skillbar-bar" style="background: #00695c;"></div>
+                   <div class="skill-bar-percent">65%</div>
+                   </div>
+                   <!-- /jQuery  -->
+                   <div class="skillbar clearfix " data-percent="75%">
+                   <div class="skillbar-title" style="background: #00acc1;"><span>C/C++</span></div>
+                   <div class="skillbar-bar" style="background: #00acc1;"></div>
+                   <div class="skill-bar-percent">75%</div>
+                   </div>
+ 
+                   <div class="skillbar clearfix " data-percent="80%">
+                   <div class="skillbar-title" style="background: #00a8ff;"><span>HTML5</span></div>
+                   <div class="skillbar-bar" style="background: #00a8ff;"></div>
+                   <div class="skill-bar-percent">80%</div>
+                   </div>
+ 
+                   <div class="skillbar clearfix " data-percent="70%">
+                   <div class="skillbar-title" style="background: #01579b;"><span>Photoshop</span></div>
+                   <div class="skillbar-bar" style="background: #01579b;"></div>
+                   <div class="skill-bar-percent">70%</div>
+                   </div>
+ 
+                   <div class="skillbar clearfix " data-percent="80%">
+                   <div class="skillbar-title" style="background: #fb8c00;"><span>Illustrator</span></div>
+                   <div class="skillbar-bar" style="background: #fb8c00;"></div>
+                   <div class="skill-bar-percent">80%</div>
+                   </div>
+ 
+            </div>
+          </div>
+        </div>
+ 
+    </div>
+ 
+      <div class="col s12 m8 l9">
+ 
+        <div class="row">
+ 
+           <div class="card-panel grey darken-4">
+ 
+               <span class="white-text row">Proficient in
+               </span>
+               <div class="row tabled"><!--first card row begins -->
+                   <!-- first card -->
+                  <div class="col s12 m4 l4 celled">
+                    <div class="card-panel teal hoverable center">
+                      <div class="row center">
+                         <img src="images/android.svg" height="100px" width="100px" />
+                      </div><span class="white-text">
+                        <b>Android App Development</b></span><span class="teal-text text-lighten-5"><br/>Passionate Android developer, can deliver simply awesome apps that stands out.
+                      </span>
+                    </div>
+                  </div>
+                  <!-- second card -->
+                  <div class="col s12 m4 l4 celled">
+                    <div class="card-panel teal hoverable center">
+                      <div class="row center">
+                         <img src="images/nodeweb.svg" height="100px" width="100px" />
+                      </div><span class="white-text">
+                        <b>Web Development</b></span><span class="teal-text text-lighten-5"><br/>Armed with Node.js and front-end tools to bring out powerful APIs and elegent web apps.
+                      </span>
+                    </div>
+                  </div>
+                  <!-- third card -->
+                  <div class="col s12 m4 l4 celled">
+                    <div class="card-panel teal hoverable center">
+                      <div class="row center">
+                         <img src="images/designing.svg" height="100px" width="100px" />
+                      </div><span class="white-text">
+                        <b>Graphic Designing</b></span><span class="teal-text text-lighten-5"><br/>Designer and Keen admirer of art and design. Passionate UI/UX designer and developer.
+                      </span>
+                    </div>
+                  </div>
+               </div> <!--first card row ends -->
+ 
+          </div>
+        </div>
+        <div class="row">
+           <div class="card-panel grey darken-4">
+             <div>
+               <span class="white-text row">Education
+               </span>
+               <div class="row"><!--first card row begins -->
+                   <!-- first card -->
+                  <div class="col 12 m4">
+                    <div class="card-panel teal hoverable center">
+                      <div class="row center">
+                         <img src="images/graduation.svg" height="100px" width="100px" />
+                      </div><span class="white-text">
+                        <b>Computer Science and Engineering</b></span><span class="teal-text text-lighten-5"><br/>Sahyadri college of Engineering and Management, Mangalore. Under VTU. Batch of 2019.
+                      </span>
+                    </div>
+                  </div>
+                  <!-- second card -->
+                  <div class="col s12 m4">
+                    <div class="card-panel teal hoverable center">
+ 
+                      <div class="row center">
+                         <img src="images/preuniversity.svg" height="100px" width="100px" />
+                      </div>
+                      <span class="white-text">
+                        <b>Pre-University College</b></span><span class="teal-text text-lighten-5"><br/>Thanbeehul Islam HSS, Naimarmoola. Under Kerala state board of Education. Batch of 2015.
+                      </span>
+                    </div>
+                  </div>
+                  <!-- third card -->
+                  <div class="col s12 m4">
+                    <div class="card-panel teal hoverable center">
+ 
+                      <div class="row center">
+                         <img src="images/highschool.svg" height="100px" width="100px" />
+                      </div>
+                      <span class="white-text">
+                        <b>HighSchool/SSLC</b></span><span class="teal-text text-lighten-5"><br/>Udaya Higher Secondary School, Manjeshwar. Under Kerala state board of Education. Batch of 2013.
+                      </span>
+                    </div>
+                  </div>
+               </div> <!--first card row ends -->
+             </div>
+ 
+ 
+         </div>
+       </div>
+ 
+ </div>
+   </div>
+  <!-- end of home -->
+  </div>
+
+  <div id="portfolio" class="col s12">
+    
+    
+    <div class="row #333333 pad20top">
+ 
+ 
+   <div class="col s12 m8 l9">
+ 
+ 
+      <!-- container starts -->
+ 
+                     <div class="row center">
+                       <div class="col s12 m6 l6">
+                         <div class="card  #212121 grey darken-4">
+                                   <div class="card-image">
+                                     <img class="materialboxed unveil early_load_portfolio" data-src="images/legall-screen.png">
+                                   </div>
+                                   <div class="card-content">
+                                     <p class="white-text">Legall App UI design</p>
+                                   </div>
+                                 </div>
+                         </div>
+ 
+                         <div class="col s12 m6 l6">
+                           <div class="card  #212121 grey darken-4">
+                                     <div class="card-image">
+                                       <img class="materialboxed unveil early_load_portfolio" data-src="images/geektribe-screen.png">
+                                     </div>
+                                     <div class="card-content">
+                                       <p class="white-text">GeekTribe App UI design</p>
+                                     </div>
+                                   </div>
+                           </div>
+                     </div>
+                     <div class="row center"><!-- first row -->
+ <div class="col s12 m4 l4">
+                           <div class="card  #212121 grey darken-4">
+                                     <div class="card-image">
+                                       <img class="materialboxed unveil early_load_portfolio" data-src="images/fasion_app.jpg">
+                                     </div>
+                                     <div class="card-content">
+                                       <p class="white-text">Fashion App - UI Design</p>
+                                     </div>
+                                   </div>
+                           </div>
+ 
+ 
+ <div class="col s12 m4 l4">
+                           <div class="card  #212121 grey darken-4">
+                                     <div class="card-image">
+                                       <img class="materialboxed unveil early_load_portfolio" data-src="images/clouds_web_2.jpg">
+                                     </div>
+                                     <div class="card-content">
+                                       <p class="white-text">Clouds - Web Design</p>
+                                     </div>
+                                   </div>
+                           </div>
+ 
+                        <div class="col s12 m4 l4">
+                           <div class="card  #212121 grey darken-4">
+                                     <div class="card-image">
+                                       <img class="materialboxed unveil early_load_portfolio" data-src="images/clouds_web_1.jpg">
+                                     </div>
+                                     <div class="card-content">
+                                       <p class="white-text">Clouds - Web Design</p>
+                                     </div>
+                                   </div>
+                           </div>
+ 
+ 
+  <div class="col s12 m4 l4">
+                           <div class="card  #212121 grey darken-4">
+                                     <div class="card-image">
+                                       <img class="materialboxed unveil" data-src="images/guitar.jpg">
+                                     </div>
+                                     <div class="card-content">
+                                       <p class="white-text">Guitar - Illustration</p>
+                                     </div>
+                                   </div>
+                           </div>
+ <div class="col s12 m4 l4">
+                           <div class="card  #212121 grey darken-4">
+                                     <div class="card-image">
+                                       <img class="materialboxed unveil" data-src="images/black_out.png">
+                                     </div>
+                                     <div class="card-content">
+                                       <p class="white-text">Black Out - Illustration</p>
+                                     </div>
+                                   </div>
+                           </div>
+ 
+ <div class="col s12 m4 l4">
+                             <div class="card  #212121 grey darken-4">
+                                       <div class="card-image">
+                                         <img class="materialboxed unveil" data-src="images/driodo.jpg">
+                                       </div>
+                                       <div class="card-content">
+                                         <p class="white-text">Driodo - Logo/Icon design</p>
+                                       </div>
+                                     </div>
+                             </div>
+ 
+ <div class="col s12 m4 l4">
+                             <div class="card  #212121 grey darken-4">
+                                       <div class="card-image">
+                                         <img class="materialboxed unveil" data-src="images/cafe1.jpg">
+                                       </div>
+                                       <div class="card-content">
+                                         <p class="white-text">Cafe - Isometric Illustration</p>
+                                       </div>
+                                     </div>
+                             </div>
+ 
+ <div class="col s12 m4 l4">
+                             <div class="card  #212121 grey darken-4">
+                                       <div class="card-image">
+                                         <img class="materialboxed unveil" data-src="images/the_flash.jpg">
+                                       </div>
+                                       <div class="card-content">
+                                         <p class="white-text">CW The Flash - Illustration</p>
+                                       </div>
+                                     </div>
+                             </div>
+ 
+                           <div class="col s12 m4 l4">
+                             <div class="card  #212121 grey darken-4">
+                                       <div class="card-image">
+                                         <img class="materialboxed unveil" data-src="images/tape.jpg">
+                                       </div>
+                                       <div class="card-content">
+                                         <p class="white-text">Casette Tape - Illustration</p>
+                                       </div>
+                                     </div>
+                             </div>
+                             <div class="col s12 m4 l4">
+                               <div class="card  #212121 grey darken-4">
+                                         <div class="card-image">
+                                           <img class="materialboxed unveil" data-src="images/watch.jpg">
+                                         </div>
+                                         <div class="card-content">
+                                           <p class="white-text">Watch - Illustration</p>
+                                         </div>
+                                       </div>
+                               </div>
+                               <div class="col s12 m4 l4">
+                                 <div class="card  #212121 grey darken-4">
+                                           <div class="card-image">
+                                             <img class="materialboxed unveil" data-src="images/camera.jpg">
+                                           </div>
+                                           <div class="card-content">
+                                             <p class="white-text">Camera - Illustration</p>
+                                           </div>
+                                         </div>
+                                 </div>
+                                 <div class="col s12 m4 l4">
+                                   <div class="card  #212121 grey darken-4">
+                                             <div class="card-image">
+                                               <img class="materialboxed unveil" data-src="images/castle1.jpg">
+                                             </div>
+                                             <div class="card-content">
+                                               <p class="white-text">Isometric Castle - Illustration</p>
+                                             </div>
+                                           </div>
+                                   </div>
+                     <div class="col s12 m4 l4">
+                       <div class="card  #212121 grey darken-4">
+                                 <div class="card-image">
+                                   <img class="materialboxed unveil" data-src="images/img1.png">
+                                 </div>
+                                 <div class="card-content">
+                                   <p class="white-text">Mhozo.in - Logo design</p>
+                                 </div>
+                               </div>
+                       </div>
+                       <div class="col s12 m4 l4">
+                         <div class="card  #212121 grey darken-4">
+                                   <div class="card-image">
+                                     <img class="materialboxed unveil" data-src="images/img2.png">
+                                   </div>
+                                   <div class="card-content">
+                                     <p class="white-text">Wafa - App icon design</p>
+                                   </div>
+                                 </div>
+                         </div>
+                         <div class="col s12 m4 l4">
+                           <div class="card  #212121 grey darken-4">
+                                     <div class="card-image">
+                                       <img class="materialboxed unveil" data-src="images/img3.png">
+                                     </div>
+                                     <div class="card-content">
+                                       <p class="white-text">Xoika - Logo design</p>
+                                     </div>
+                                   </div>
+                           </div>
+ 
+                         <div class="col s12 m4 l4">
+                           <div class="card  #212121 grey darken-4">
+                                     <div class="card-image">
+                                       <img class="materialboxed unveil" data-src="images/img4.png">
+                                     </div>
+                                     <div class="card-content">
+                                       <p class="white-text">Legall - Logo/App icon design</p>
+                                     </div>
+                                   </div>
+                           </div>
+ 
+                             <div class="col s12 m4 l4">
+                               <div class="card  #212121 grey darken-4">
+                                         <div class="card-image">
+                                           <img class="materialboxed unveil" data-src="images/img6.png">
+                                         </div>
+                                         <div class="card-content">
+                                           <p class="white-text">Manframe Computers - Logo design</p>
+                                         </div>
+                                       </div>
+                               </div>
+ 
+                               <div class="col s12 m4 l4">
+                                 <div class="card  #212121 grey darken-4">
+                                           <div class="card-image">
+                                             <img class="materialboxed unveil" data-src="images/img5.png">
+                                           </div>
+                                           <div class="card-content">
+                                             <p class="white-text">Dreem cart - Logo design</p>
+                                           </div>
+                                         </div>
+                                 </div>
+ 
+ 
+                             <div class="col s12 m4 l4">
+                               <div class="card  #212121 grey darken-4">
+                                         <div class="card-image">
+                                           <img class="materialboxed unveil" data-src="images/img7.png">
+                                         </div>
+                                         <div class="card-content">
+                                           <p class="white-text">SFL - Event Logo</p>
+                                         </div>
+                                       </div>
+                               </div>
+ 
+                                 <div class="col s12 m4 l4">
+                                   <div class="card  #212121 grey darken-4">
+                                             <div class="card-image">
+                                               <img class="materialboxed unveil" data-src="images/img8.png">
+                                             </div>
+                                             <div class="card-content">
+                                               <p class="white-text">aeiton Labs - Logo design</p>
+                                             </div>
+                                           </div>
+                                   </div>
+ 
+                                   <div class="col s12 m4 l4">
+                                     <div class="card  #212121 grey darken-4">
+                                               <div class="card-image">
+                                                 <img class="materialboxed unveil" data-src="images/img9.png">
+                                               </div>
+                                               <div class="card-content">
+                                                 <p class="white-text">RNV Digital - Logo Design</p>
+                                               </div>
+                                             </div>
+                                     </div>
+                                 </div>
+                                 <!-- end of third row -->
+     <!-- container ends -->
+ 
+  </div>
+ 
+  <div class="col s12 m4 l3 ">
+ 
+    <div class="row">
+      <div class="card grey darken-4 z-index-4 pad20top">
+ 
+        <div class="card-content">
+          <p class="white-text">
+            <span class="card-title"><b>Need a Logo ?</b></span>
+            <br/>
+            Get in touch with me for a modern looking new logo for your venture or redesign your existing graphics to match the current trend.
+            <br/>
+            Fill out the <a href="#">request form</a> or contact via any of the following networks.
+          </p>
+        </div>
+          <div class="card-action center-align">
+            <div class="row center">
+              <ul class="icons">
+                 <li class="icon"><a href="http://facebook.com/musthu.pvr"><img src="images/facebook-logo.svg" class="responsive-img"/></a></li>
+                 <li class="icon"><a href="https://api.whatsapp.com/send?phone=919539518599"><img src="images/whatsapp.svg" class="responsive-img"/></a></li>
+                 <li class="icon"><a href="http://instagram.com/haxzie"><img src="images/insta-logo.svg" class="responsive-img"/></a></li>
+             </ul>
+           </div>
+          </div>
+      </div>
+    </div>
+ 
+  </div>
+ 
+   </div>
+ 
+  </div> <!-- End of portfolio page -->
+
+
+
+  <!-- projects page -->
+  <div id="projects" class="col s12">
+    <div class="row #333333 pad20top">
+ 
+      <div class="col s12 m8 l9">
+ 
+        <div class="row"><!-- first row-->
+          <div class="col s12 m6">
+           <div class="card-panel #212121 grey darken-4">
+             <div class="row">
+               <div class="col s4 m4 l4">
+                 <img data-src="images/crode-app-icon.png" class="circle responsive project-img early_load_projects unveil"/>
+               </div>
+               <div class="col s8 m8 l8">
+                 <span class="white-text">crode.js - node ftp crawler</span>
+                 <br/>
+ 
+                   <a class="waves-effect waves-light btn mar5top" href="https://github.com/haxzie/crode.js-Node-web-Crawler"><i class="material-icons right">launch</i>Github</a>
+ 
+               </br/>
+               </div>
+             </div>
+             <span class="white-text">Crode.js is a node.js web crawler and scrapper designed to scrape download links.
+               by scanning open ftp servers. Its powered by crawler.js and express.js.
+             </span>
+           </div>
+         </div>
+         <div class="col s12 m6">
+          <div class="card-panel #212121 grey darken-4">
+            <div class="row">
+              <div class="col s4 m4 l4">
+                <img data-src="images/gt-app-icon.png" class="circle responsive project-img unveil early_load_projects"/>
+              </div>
+              <div class="col s8 m8 l8">
+                <span class="white-text">GeekTribe - Android App</span>
+                <br/>
+ 
+                  <a class="waves-effect waves-light btn mar5top" href="https://github.com/haxzie/GeekTribe"><i class="material-icons right">launch</i>Github</a>
+ 
+              </br/>
+              </div>
+            </div>
+            <span class="white-text">GeekTribe is a pure Firebase powered social network and collaboration platform for studnets.
+              App contains features such as news feed, likes, comments, groups, timetables, syllabus etc.
+            </span>
+          </div>
+        </div>
+        </div>
+        <div class="row"><!-- second row-->
+          <div class="col s12 m6">
+           <div class="card-panel #212121 grey darken-4">
+             <div class="row">
+               <div class="col s4 m4 l4">
+                 <img data-src="images/biblios-app-icon.png" class="circle responsive project-img unveil early_load_projects"/>
+               </div>
+               <div class="col s8 m8 l8">
+                 <span class="white-text">Biblios - Android App</span>
+                 <br/>
+ 
+                   <a class="waves-effect waves-light btn mar5top" href="https://play.google.com/store/apps/details?id=com.whattabiz.bibliosbookpoint"><i class="material-icons right">launch</i>Store</a>
+ 
+               </br/>
+               </div>
+             </div>
+             <span class="white-text">Biblios android application is an ecommerce application for buying books online.
+               App is developed for an offline store to attract more customers through their online presence.
+             </span>
+           </div>
+         </div>
+         <div class="col s12 m6">
+          <div class="card-panel #212121 grey darken-4">
+            <div class="row">
+              <div class="col s4 m4 l4">
+                <img data-src="images/legall-app-icon.png" class="circle responsive project-img unveil early_load_projects"/>
+              </div>
+              <div class="col s8 m8 l8">
+                <span class="white-text">Legall - Android App</span>
+                <br/>
+ 
+                  <a class="waves-effect waves-light btn mar5top" href="https://play.google.com/store/apps/details?id=com.whattabiz.legall"><i class="material-icons right">launch</i>Store</a>
+ 
+              </br/>
+              </div>
+            </div>
+            <span class="white-text">Legall as one of a kind in the legal platform which offers wide veriety of services including hiring a lawyer,
+               document scrutiny, buying legal documents online and much more.
+            </span>
+          </div>
+        </div>
+        </div>
+        <div class="row"><!-- third row-->
+          <div class="col s12 m6">
+           <div class="card-panel #212121 grey darken-4">
+             <div class="row">
+               <div class="col s4 m4 l4">
+                 <img data-src="images/adventro-app-icon.png" class="circle responsive project-img unveil early_load_projects"/>
+               </div>
+               <div class="col s8 m8 l8">
+                 <span class="white-text">Adventro - Android App</span>
+                 <br/>
+ 
+                   <a class="waves-effect waves-light btn mar5top"><i class="material-icons right">launch</i>Gihub</a>
+ 
+               </br/>
+               </div>
+             </div>
+             <span class="white-text">Adventro is a location based social network targeted to travelers and hikers. App contains a dynamic newsfeed based on the hiking location near to the user based on user data.
+             </span>
+           </div>
+         </div>
+ 
+        </div>
+ 
+      </div>
+ 
+      <div class="col s12 m4 l3">
+        <div class="row">
+          <div class="card grey darken-4 z-index-4 pad20top">
+              <div class="container center-align">
+                <img data-src="images/github-logo.svg" alt="" class="responsive-img img-git center-align unveil early_load_projects">
+               </div>
+              <div class="card-content">
+                <p class="card-title white-text center"><b>Wanna collab?</b></p>
+                <p class="white-text center">Feel free to invite for open source development or help me improve the lines. Get in touch with me on Github and explore few of my upcoming projects.</p>
+              </div>
+                <div class="card-action center-align">
+                  <div class="row pad10bottom">
+                    <div class="col s12 m12 l12">
+                      <a class="waves-effect waves-light btn"><i class="material-icons right">launch</i>Github</a>
+                    </div>
+                 </div>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div> <!-- End of projects page -->
+
+
+<!-- about page -->
+  <div id="about" class="col s12">
+    <div class="row #333333 pad20top">
+      <div class="col s12 m4 l4">
+ 
+               <div class="row">
+                 <div class="card grey darken-4 z-index-4 pad20top">
+                   <div class="container center-align">
+                     <img data-src="images/mypic.png" alt="" class="circle responsive-img center-align unveil early_load_profile">
+                    </div>
+                   <div class="card-content">
+                     <p class="card-title white-text center-align">Musthaq Ahamad</p>
+                     <p class="white-text center-align">Hi, this is Musthaq Ahamad, one among infinity. <br/>
+                       I am a Hobbiyist Programmer and Freelance Graphic designer from Kasaragod, India. A keen UI/UX admirer and designer. <br />Love to make things colourful from the early days of my schoolings at Udaya HSS. Developed the urge to understand and code stuffs to form interesting stuffs from my pre-university college Thanbeehul Islam HSS Naimarmoola with the help of supportive lecturers who helped to discover my abilities. Started at Sahyadri aspiring to enhance my skills and dive into the world of programming and development. <br />Learned android to bring my little ideas into reality leading to work at an inspiring startup named Whattabiz who had these strong ideas to get offline business to online. Learned a lot of what I loved to do from my own seniors whom I am always in debt to. Life is always a never ending process of learning and I always have my curiosity to drive me through things that are interesting around us.</p>
+                   </div>
+                 </div>
+               </div>
+      </div>
+      <div class="col s12 m8 l8">
+        <div class="row">
+ 
+           <div class="card-panel grey darken-4">
+             <span class="white-text row">Photos
+               </span>
+               <div class="row tabled"><!--first card row begins -->
+                   <!-- first card -->
+                   <div class="col s6 m4 l4">
+                     <div class="card  #212121 grey darken-4">
+                               <div class="card-image">
+                                 <img class="materialboxed unveil early_load_profile" data-src="images/photoes/photo5.jpg">
+                               </div>
+                             </div>
+                     </div>
+                     <div class="col s6 m4 l4">
+                       <div class="card  #212121 grey darken-4">
+                                 <div class="card-image">
+                                   <img class="materialboxed unveil early_load_profile" data-src="images/photoes/photo4.jpg">
+                                 </div>
+                               </div>
+                       </div>
+                       <div class="col s6 m4 l4">
+                         <div class="card  #212121 grey darken-4">
+                                   <div class="card-image">
+                                     <img class="materialboxed unveil early_load_profile" data-src="images/photoes/photo7.jpg">
+                                   </div>
+                                 </div>
+                         </div>
+                         <div class="col s6 m4 l4">
+                           <div class="card  #212121 grey darken-4">
+                                     <div class="card-image">
+                                       <img class="materialboxed unveil early_load_profile" data-src="images/photoes/photo8.jpg">
+                                     </div>
+                                   </div>
+                           </div>
+                           <div class="col s6 m4 l4">
+                             <div class="card  #212121 grey darken-4">
+                                       <div class="card-image">
+                                         <img class="materialboxed unveil early_load_profile" data-src="images/photoes/photo3.jpg">
+                                       </div>
+                                     </div>
+                             </div>
+                             <div class="col s6 m4 l4">
+                               <div class="card  #212121 grey darken-4">
+                                         <div class="card-image">
+                                           <img class="materialboxed unveil early_load_profile" data-src="images/photoes/photo2.jpg">
+                                         </div>
+                                       </div>
+                               </div>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+ <!-- End of about page -->
+
+
+
+ <a id="fab" href="#" class="btn-floating btn-large waves-effect waves-light green tooltipped" data-position="left" data-delay="50" data-tooltip="Download Resume" style="bottom: 30px; right: 24px; position: fixed;"><i class="material-icons">file_download</i></a>
+ <!-- Tap Target Structure -->
+ <div class="tap-target" data-activates="fab">
+   <div class="tap-target-content white-text">
+     <h5>Download Resume</h5>
+     <p>If you are looking for my resume, click the FAB to download my resume in PDF format.</p>
+   </div>
+ </div>
+ 
+
+<footer class="page-footer #212121 grey darken-4">
+ <div class="footer-copyright">
+   <div class="container">
+   haxzie.me © 2017
+   <a class="grey-text text-lighten-4 right" href="http://materializecss.com">Made with ❤ Materialize</a>
+   </div>
+ </div>
+</footer>
+  </body>
+</html>
+
+
